@@ -1,7 +1,7 @@
 name: My Bot Run
 
 on:
-  push
+  workflow_dispatch:
 
 env:
   TOKEN: ${{secrets.TOKEN}}
