@@ -15,7 +15,7 @@ def stop_bot():
     stop_flag = True
 
 
-@bot.message_handler(func=lambda message: 'send me your photo please' in message.text.lower())
+@bot.message_handler(func=lambda message: 'пришли мне свое фото' in message.text.lower())
 def send_image(message):
     image_path = "photo_3.jpg"
     with open(image_path, 'rb') as photo:
@@ -48,7 +48,7 @@ def info(message):
     elif message.text.lower() == "бери ее с собой веселее будет":
         time.sleep(10)
         bot.send_message(message.chat.id, "Ну не знаю, если согласиться")
-    elif message.text.lower() == "я думаю согласиться скажи ей я для нее кого-нибудь позову":
+    elif message.text.lower() == "я думаю согласиться скажи я для нее кого-нибудь позову":
         time.sleep(15)
         bot.send_message(message.chat.id, "Ладно попробую")
     elif message.text.lower() == "давай я через час заеду нормально будет":
